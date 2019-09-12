@@ -8,6 +8,10 @@ import { PageNotFoundComponent } from './components/basic-pages/page-not-found/p
 import { HomePageComponent } from './components/basic-pages/home-page/home-page.component';
 import { HeaderComponent } from './components/root/header/header.component';
 import { FooterComponent } from './components/root/footer/footer.component';
+import { SidebarNavigationComponent } from './components/root/sidebar-navigation/sidebar-navigation.component';
+import { HeaderNavigationComponent } from './components/root/header/header-navigation/header-navigation.component';
+import { LogoComponent } from './components/root/header/logo/logo.component';
+import { ApplicationFormComponent } from './components/application-form/application-form.component';
 
 @NgModule({
   imports: [
@@ -21,7 +25,11 @@ import { FooterComponent } from './components/root/footer/footer.component';
     HomePageComponent,
     ContactUsComponent,
     AboutUsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderNavigationComponent,
+    SidebarNavigationComponent,
+    LogoComponent,
+    ApplicationFormComponent
   ],
   bootstrap: [ RootComponent ]
 })

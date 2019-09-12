@@ -1,0 +1,24 @@
+$sidenav-padding: 1rem;
+$sidenav-width: 15rem;
+
+footer {
+  background-color: chocolate;
+}
+
+header {
+  background-color: cornflowerblue;
+}
+
+mat-sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-sidenav {  
+  padding: $sidenav-padding;
+  width: $sidenav-width;
+  overflow: auto;
+}

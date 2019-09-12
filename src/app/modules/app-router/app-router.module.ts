@@ -4,6 +4,7 @@ import { PageNotFoundComponent } from '../app-root/components/basic-pages/page-n
 import { HomePageComponent } from '../app-root/components/basic-pages/home-page/home-page.component';
 import { AboutUsComponent } from '../app-root/components/basic-pages/about-us/about-us.component';
 import { ContactUsComponent } from '../app-root/components/basic-pages/contact-us/contact-us.component';
+import { ApplicationFormComponent } from '../app-root/components/application-form/application-form.component';
 
 const ROUTES: Routes = [
   {
@@ -26,6 +27,10 @@ const ROUTES: Routes = [
   {
     path: 'contact-us',
     component: ContactUsComponent
+  },
+  {
+    path: 'application-form',
+    component: ApplicationFormComponent
   },
   {
     path: '**',

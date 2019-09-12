@@ -1,9 +1,11 @@
-<button routerLink="/">
-  Home Page
-</button>
-<button routerLink="/about-us">
-  Despre noi
-</button>
-<button routerLink="/contact-us">
-  Contactați-ne
-</button>
+<mat-toolbar 
+    color="primary"
+    fxLayout="row"
+    fxLayoutAlign="start center"
+    fxLayoutGap="1rem">  
+  <button fxHide.gt-sm mat-icon-button (click)="onToggle()">
+    <mat-icon>menu</mat-icon> 
+  </button>  
+  <fg-logo></fg-logo>
+  <fg-header-navigation fxHide.lt-md></fg-header-navigation>
+</mat-toolbar>

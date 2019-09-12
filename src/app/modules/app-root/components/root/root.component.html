@@ -1,3 +1,31 @@
-<fg-header></fg-header>
-<router-outlet></router-outlet>
-<fg-footer></fg-footer>
+<mat-sidenav-container>
+    <mat-sidenav fxHide.gt-md #sidenav mode="push">
+     <fg-sidebar-navigation></fg-sidebar-navigation>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <div 
+          fxFlex
+          style="width: 100%" 
+          fxLayout="column" 
+          fxLayoutAlign="start stretch">
+  
+        <header>                 
+          <fg-header (toggleSidebar)="toggle(sidenav)"></fg-header>
+        </header>
+  
+        <main fxFlex>          
+          <router-outlet></router-outlet>     
+        </main>
+  
+        <footer
+            fxLayout="column" 
+            fxLayoutAlign="start stretch"
+            fxLayoutAlign.lt-lg="start stretch"> 
+          <fg-footer></fg-footer>
+        </footer>
+  
+      </div>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>

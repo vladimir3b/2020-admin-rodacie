@@ -1,0 +1,66 @@
+$color0:#E0F2F1;
+$color1:#E57373;
+$color3:#EF5350;
+$color2:#00897B;
+$color4:#00695C;
+
+.logo {
+  &:hover {
+    animation: text-shadow 5s ease-in-out infinite;
+  }
+  color: $color0;
+}
+
+@keyframes text-shadow {
+    0% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 $color1, 
+            0 0 0 $color2, 
+            0 0 0 $color3, 
+            0 0 0 $color4;
+    }
+
+    20% {  
+        transform: translateY(-1em);
+        text-shadow: 
+            0 0.125em 0 $color1, 
+            0 0.25em 0 $color2, 
+            0 -0.125em 0 $color3, 
+            0 -0.25em 0 $color4;
+    }
+
+    40% {  
+        transform: translateY(0.5em);
+        text-shadow: 
+            0 -0.0625em 0 $color1, 
+            0 -0.125em 0 $color2, 
+            0 0.0625em 0 $color3, 
+            0 0.125em 0 $color4;
+    }
+    
+   60% {
+        transform: translateY(-0.25em);
+        text-shadow: 
+            0 0.03125em 0 $color1, 
+            0 0.0625em 0 $color2, 
+            0 -0.03125em 0 $color3, 
+            0 -0.0625em 0 $color4;
+    }
+
+    80% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 $color1, 
+            0 0 0 $color2, 
+            0 0 0 $color3, 
+            0 0 0 $color4;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+}
