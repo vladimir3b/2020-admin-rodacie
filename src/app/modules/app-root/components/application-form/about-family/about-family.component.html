@@ -1,0 +1,21 @@
+<form 
+    fxLayout="column"
+    [fxLayoutGap]="gapBetweenFormElements"
+    fxLayoutAlign="start">
+  
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="Adresă de email">
+  </mat-form-field>
+  <mat-radio-group   
+      aria-label="Select an option"  
+      fxLayout="column"
+      fxLayoutAlign="center stretch"
+      [fxLayoutGap]="gapBetweenFormElements">
+    <mat-radio-button value="1">
+      Familie monoparentală sau cu reprezentant legal
+    </mat-radio-button>      
+    <mat-radio-button value="2">
+        Familie cu doi părinți
+    </mat-radio-button>
+  </mat-radio-group>
+</form>

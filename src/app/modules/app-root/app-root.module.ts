@@ -12,6 +12,12 @@ import { SidebarNavigationComponent } from './components/root/sidebar-navigation
 import { HeaderNavigationComponent } from './components/root/header/header-navigation/header-navigation.component';
 import { LogoComponent } from './components/root/header/logo/logo.component';
 import { ApplicationFormComponent } from './components/application-form/application-form.component';
+import { AboutChildComponent } from './components/application-form/about-child/about-child.component';
+import { AboutFamily } from './components/application-form/about-family/about-family.component';
+import { AboutMonoparentalFamily } from './components/application-form/about-monoparental-family/about-monoparental-family.component';
+import { AboutFatherComponent } from './components/application-form/about-father/about-father.component';
+import { AboutMotherComponent } from './components/application-form/about-mother/about-mother.component';
+import { OtherInformationComponent } from './components/application-form/other-information/other-information.component';
 
 @NgModule({
   imports: [
@@ -29,7 +35,13 @@ import { ApplicationFormComponent } from './components/application-form/applicat
     HeaderNavigationComponent,
     SidebarNavigationComponent,
     LogoComponent,
-    ApplicationFormComponent
+    ApplicationFormComponent,
+    AboutChildComponent,
+    AboutFamily,
+    AboutMonoparentalFamily,
+    AboutFatherComponent,
+    AboutMotherComponent,
+    OtherInformationComponent
   ],
   bootstrap: [ RootComponent ]
 })

@@ -1,0 +1,91 @@
+<form 
+    fxLayout="column"
+    [fxLayoutGap]="gapBetweenFormElements"
+    fxLayoutAlign="start">
+  <h3>Mama</h3>
+  <div       
+      fxLayout="row"
+      fxLayoutAlign="center stretch"
+      fxLayout.lt-md="column"
+      [fxLayoutGap]="gapBetweenFormElements">
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Nume">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Prenume">
+    </mat-form-field>
+  </div>  
+  <mat-radio-group   
+      aria-label="Select an option"  
+      fxLayout="row"
+      fxLayout.lt-sm="column"
+      fxLayoutAlign="center stretch"
+      [fxLayoutGap]="gapBetweenFormElements">
+    <mat-radio-button value="1">
+      Adresă de domiciliu
+    </mat-radio-button>      
+    <mat-radio-button value="2">
+      Adresă de reședință (viză)
+    </mat-radio-button>
+  </mat-radio-group>
+
+  <div       
+      fxLayout="column"
+      fxLayoutAlign="center stretch"
+      [fxLayoutGap]="gapBetweenFormElements">
+    <div
+        [fxLayoutGap]="gapBetweenFormElements"
+        fxLayout="row"
+        fxLayout.lt-sm="column">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Localitate">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Strada">
+      </mat-form-field>  
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Număr">
+      </mat-form-field>
+    </div>
+    <div
+        fxLayout="row"
+        fxLayout.lt-sm="column"
+        [fxLayoutGap]="gapBetweenFormElements">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Bloc">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Etaj">
+      </mat-form-field>  
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Sector">
+      </mat-form-field>
+    </div>
+  </div>  
+
+  <div       
+      fxLayout="row"
+      fxLayoutAlign="center stretch"
+      fxLayout.lt-md="column"
+      [fxLayoutGap]="gapBetweenFormElements">
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Telefon fix">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Telefon mobil">
+    </mat-form-field>
+  </div>
+
+  <div       
+      fxLayout="row"
+      fxLayoutAlign="center stretch"
+      fxLayout.lt-md="column"
+      [fxLayoutGap]="gapBetweenFormElements">
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Salariat la">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Funcția">
+    </mat-form-field>
+  </div>
+</form>

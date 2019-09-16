@@ -1,7 +1,18 @@
+@import './../../../../../resources/styles/variables';
+
 .form-field-ls {
   width: 27rem;
 }
 
 .form-field-ss {
   width: 95vw;
+}
+
+.navigation {
+  padding: 0;
+  margin: 3 * $gap-between-form-elements 0 0 0;
+}
+
+mat-form-field, mat-radio-button, mat-checkbox {
+  width: 100%;
 }

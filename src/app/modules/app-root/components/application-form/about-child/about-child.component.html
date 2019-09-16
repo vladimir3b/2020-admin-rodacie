@@ -1,0 +1,87 @@
+<form 
+    fxLayout="column"
+    [fxLayoutGap]="gapBetweenFormElements"
+    fxLayoutAlign="start">
+
+  <!-- <h2>Informații despre copil</h2> -->
+  <div       
+      fxLayout="row"
+      fxLayoutAlign="center stretch"
+      fxLayout.lt-md="column"
+      [fxLayoutGap]="gapBetweenFormElements">
+    <mat-form-field appearance="outline">
+      <mat-select placeholder="Alege opțiune creșă 1">
+        <mat-option value="option1">Creșa 1</mat-option>
+        <mat-option value="option2">Creșa 2</mat-option>
+        <mat-option value="option3">Creșa 3</mat-option>
+        <mat-option value="option4">Creșa 4</mat-option>
+        <mat-option value="option5">Creșa 5</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-select placeholder="Alege opțiune creșă 2">
+        <mat-option value="option1">Creșa 1</mat-option>
+        <mat-option value="option2">Creșa 2</mat-option>
+        <mat-option value="option3">Creșa 3</mat-option>
+        <mat-option value="option4">Creșa 4</mat-option>
+        <mat-option value="option5">Creșa 5</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div       
+      fxLayout="row"
+      fxLayoutAlign="center stretch"
+      fxLayout.lt-md="column"
+      [fxLayoutGap]="gapBetweenFormElements">
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Nume copil">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Prenume copil">
+    </mat-form-field>
+  </div>
+  <div       
+      fxLayout="row"
+      fxLayoutAlign="center stretch"
+      fxLayout.lt-md="column"
+      [fxLayoutGap]="gapBetweenFormElements">
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="CNP">
+    </mat-form-field>
+    <div 
+        fxLayout="row"
+        [fxLayoutGap]="gapBetweenFormElements">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Vârstă (ani)">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Vârstă (luni)">
+      </mat-form-field>
+    </div>      
+  </div>
+  <h3>Perioada de înscriere</h3>
+  <mat-radio-group   
+      aria-label="Select an option"  
+      fxLayout="column"
+      fxLayoutAlign="center stretch"
+      [fxLayoutGap]="gapBetweenFormElements">
+      <mat-radio-button value="1">
+          Începând cu data de 02-09-2019 (data începerii anului școlar)
+        </mat-radio-button>      
+  <mat-radio-button value="2">
+      <div>
+        De la o data ulterioară:
+        <mat-form-field appearance="outline">
+          <input matInput [matDatepicker]="picker" placeholder="alegeți o dată">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </mat-radio-button>
+  </mat-radio-group>
+<!--   
+  <h2>Adresa de email</h2>
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="Email">
+  </mat-form-field> -->
+</form>

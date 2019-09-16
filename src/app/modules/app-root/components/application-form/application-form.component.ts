@@ -4,4 +4,6 @@ import { Component } from '@angular/core';
   templateUrl: './application-form.component.html',
   styleUrls: [ './application-form.component.scss' ]
 })
-export class ApplicationFormComponent {}
+export class ApplicationFormComponent {
+  gapBetweenFormElements = "1.2rem";
+}

@@ -1,35 +1,141 @@
 <h1>Cererea on-line de înscriere la creșă</h1>
+<div 
+    fxLayout="column"
+    fxLayoutAlign="start center">
 
-<form 
-  fxLayout="column"
-  fxLayoutAlign="center center">
-    <div 
-        fxLayout="row"
-        fxLayout.lt-md="column"
-        fxLayoutGap.gt-sm="1.5rem">
-      <mat-form-field 
-          ngClass="form-field-ls" 
-          ngClass.lt-md="form-field-ss"
-          appearance="outline">
-        <mat-select placeholder="Alege opțiune creșă 1">
-          <mat-option value="option1">Creșa 1</mat-option>
-          <mat-option value="option2">Creșa 2</mat-option>
-          <mat-option value="option3">Creșa 3</mat-option>
-          <mat-option value="option4">Creșa 4</mat-option>
-          <mat-option value="option5">Creșa 5</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field 
-          ngClass="form-field-ls" 
-          ngClass.lt-md="form-field-ss"
-          appearance="outline">
-        <mat-select placeholder="Alege opțiune creșă 2">
-          <mat-option value="option1">Creșa 1</mat-option>
-          <mat-option value="option2">Creșa 2</mat-option>
-          <mat-option value="option3">Creșa 3</mat-option>
-          <mat-option value="option4">Creșa 4</mat-option>
-          <mat-option value="option5">Creșa 5</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-</form>
+  <mat-horizontal-stepper 
+      class="container-ls"
+      ngClass.lt-md="container-ss"    
+      [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>Informații despre copil</ng-template>
+      <h2>Informații despre copil</h2>
+      <fg-about-child [gapBetweenFormElements]="gapBetweenFormElements"></fg-about-child>        
+      <div 
+          class="navigation"
+          fxLayout="row"
+          fxLayoutAlign="space-between center">
+        <span>&nbsp;</span>
+        <button 
+            mat-raised-button 
+            matStepperNext
+            color="primary">
+          Următorul
+        </button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>Informații de baza despre familie</ng-template>
+      <h2>Informații de baza despre familie</h2>      
+      <fg-about-family [gapBetweenFormElements]="gapBetweenFormElements"></fg-about-family>        
+      <div 
+          class="navigation"
+          fxLayout="row"
+          fxLayoutAlign="space-between center">
+        <button 
+            mat-raised-button 
+            matStepperPrevious
+            color="primary">
+          Înapoi
+        </button>
+        <button 
+            mat-raised-button 
+            matStepperNext
+            color="primary">
+          Următorul
+        </button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>Informații despre familia monoparentală sau cu reprezentant legal</ng-template>
+      <h2>Informații despre familia monoparentală sau cu reprezentant legal</h2>
+      <fg-about-monoparental-family [gapBetweenFormElements]="gapBetweenFormElements"></fg-about-monoparental-family>        
+      <div 
+          class="navigation"
+          fxLayout="row"
+          fxLayoutAlign="space-between center">
+        <button 
+            mat-raised-button 
+            matStepperPrevious
+            color="primary">
+          Înapoi
+        </button>
+        <button 
+            mat-raised-button 
+            matStepperNext
+            color="primary">
+          Următorul
+        </button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>Informații despre familia cu doi părinți</ng-template>
+      <h2>Informații despre familia cu doi părinți</h2>
+      <fg-about-mother [gapBetweenFormElements]="gapBetweenFormElements"></fg-about-mother>        
+      <fg-about-father [gapBetweenFormElements]="gapBetweenFormElements"></fg-about-father>        
+      <div 
+          class="navigation"
+          fxLayout="row"
+          fxLayoutAlign="space-between center">
+        <button 
+            mat-raised-button 
+            matStepperPrevious
+            color="primary">
+          Înapoi
+        </button>
+        <button 
+            mat-raised-button 
+            matStepperNext
+            color="primary">
+          Următorul
+        </button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>Alte informații</ng-template>
+      <h2>Alte informații</h2>
+      <fg-other-information [gapBetweenFormElements]="gapBetweenFormElements"></fg-other-information>      
+      <div 
+          class="navigation"
+          fxLayout="row"
+          fxLayoutAlign="space-between center">
+        <button 
+            mat-raised-button 
+            matStepperPrevious
+            color="primary">
+          Înapoi
+        </button>
+        <button 
+            mat-raised-button 
+            matStepperNext
+            color="primary">
+          Următorul
+        </button>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <h2>Formular completat</h2>
+      Ați termina de completat formularele, în cel mai scurt timp veți primi un email de la noi, 
+      vă dorim o zi bună.
+      <div
+          class="navigation"
+          fxLayout="row"
+          fxLayoutAlign="space-between center">
+        <button 
+            mat-raised-button 
+            color="primary"
+            matStepperPrevious>
+          Înapoi
+        </button>
+        <button 
+            mat-raised-button
+            color="primary"
+            (click)="stepper.reset()">
+          Reset
+        </button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+</div>
