@@ -50,6 +50,7 @@
     </mat-form-field>
     <div 
         fxLayout="row"
+        fxLayout.lt-sm="column"
         [fxLayoutGap]="gapBetweenFormElements">
       <mat-form-field appearance="outline">
         <input matInput placeholder="Vârstă (ani)">
@@ -65,23 +66,22 @@
       fxLayout="column"
       fxLayoutAlign="center stretch"
       [fxLayoutGap]="gapBetweenFormElements">
-      <mat-radio-button value="1">
-          Începând cu data de 02-09-2019 (data începerii anului școlar)
-        </mat-radio-button>      
-  <mat-radio-button value="2">
-      <div>
-        De la o data ulterioară:
-        <mat-form-field appearance="outline">
-          <input matInput [matDatepicker]="picker" placeholder="alegeți o dată">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-      </div>
-    </mat-radio-button>
-  </mat-radio-group>
-<!--   
-  <h2>Adresa de email</h2>
-  <mat-form-field appearance="outline">
-    <input matInput placeholder="Email">
-  </mat-form-field> -->
+    <mat-radio-button value="1">
+      Începând cu data de 02-09-2019 (data începerii anului școlar)
+    </mat-radio-button>      
+    <mat-radio-button value="2">
+        <div 
+            fxLayout="row" 
+            fxLayoutAlign="start center"
+            fxLayoutAlign.lt-sm="start start"
+            fxLayout.lt-sm="column">
+          <span>De la o data ulterioară:</span>
+          <mat-form-field appearance="outline">
+            <input matInput [matDatepicker]="picker" placeholder="alegeți o dată">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </mat-radio-button>
+    </mat-radio-group>
 </form>

@@ -9,6 +9,20 @@
   -webkit-box-sizing: border-box;
 }
 
+@media all and (max-width: $flex-width-sm) {
+  html {
+      font-size: 12px;
+  }
+}
+
+@media all and (max-width: $flex-width-sm / 2) {
+  html {
+    font-size: 10px;
+  }
+}
+
+
+
 .logo {
   text-align: center;
   text-decoration: none;
