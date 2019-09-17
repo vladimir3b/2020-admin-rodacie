@@ -1,31 +1,38 @@
 <form 
+    novalidate
+    [formGroup]="aboutChildForm"
     fxLayout="column"
     [fxLayoutGap]="gapBetweenFormElements"
     fxLayoutAlign="start">
 
-  <!-- <h2>Informații despre copil</h2> -->
   <div       
       fxLayout="row"
       fxLayoutAlign="center stretch"
       fxLayout.lt-md="column"
       [fxLayoutGap]="gapBetweenFormElements">
     <mat-form-field appearance="outline">
-      <mat-select placeholder="Alege opțiune creșă 1">
+      <mat-select 
+          formControlName="nurseryOption1"
+          placeholder="Alege opțiune creșă 1">
         <mat-option value="option1">Creșa 1</mat-option>
         <mat-option value="option2">Creșa 2</mat-option>
         <mat-option value="option3">Creșa 3</mat-option>
         <mat-option value="option4">Creșa 4</mat-option>
         <mat-option value="option5">Creșa 5</mat-option>
       </mat-select>
+      <mat-error>Trebuie aleasă o creșă.</mat-error>   
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-select placeholder="Alege opțiune creșă 2">
+      <mat-select 
+          formControlName="nurseryOption2"
+          placeholder="Alege opțiune creșă 2">
         <mat-option value="option1">Creșa 1</mat-option>
         <mat-option value="option2">Creșa 2</mat-option>
         <mat-option value="option3">Creșa 3</mat-option>
         <mat-option value="option4">Creșa 4</mat-option>
         <mat-option value="option5">Creșa 5</mat-option>
       </mat-select>
+      <mat-error>Trebuie aleasă o creșă.</mat-error>   
     </mat-form-field>
   </div>
   <div       
@@ -34,10 +41,18 @@
       fxLayout.lt-md="column"
       [fxLayoutGap]="gapBetweenFormElements">
     <mat-form-field appearance="outline">
-      <input matInput placeholder="Nume copil">
+      <input 
+          formControlName="lastName" 
+          matInput 
+          placeholder="Nume copil">
+      <mat-error>Numele copilului este obligatoriu.</mat-error>      
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <input matInput placeholder="Prenume copil">
+      <input 
+          formControlName="firstName" 
+          matInput 
+          placeholder="Prenume copil">
+      <mat-error>Prenumele copilului este obligatoriu.</mat-error>
     </mat-form-field>
   </div>
   <div       

@@ -18,11 +18,14 @@ import { AboutMonoparentalFamily } from './components/application-form/about-mon
 import { AboutFatherComponent } from './components/application-form/about-father/about-father.component';
 import { AboutMotherComponent } from './components/application-form/about-mother/about-mother.component';
 import { OtherInformationComponent } from './components/application-form/other-information/other-information.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     AngularMaterialModule,
-    AppRouterModule
+    AppRouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [ 
     RootComponent,
