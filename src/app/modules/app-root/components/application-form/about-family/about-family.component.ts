@@ -7,4 +7,8 @@ import { Component, Input } from "@angular/core";
 })
 export class AboutFamily {
   @Input() gapBetweenFormElements;
+  familyType: any;
+  show(): void {
+    console.log(this.familyType);
+  }
 }
