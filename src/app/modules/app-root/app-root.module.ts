@@ -19,13 +19,15 @@ import { AboutFatherComponent } from './components/application-form/about-father
 import { AboutMotherComponent } from './components/application-form/about-mother/about-mother.component';
 import { OtherInformationComponent } from './components/application-form/other-information/other-information.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ClientsModule } from '../clients/clients.module';
 
 @NgModule({
   imports: [
     AngularMaterialModule,
     AppRouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ClientsModule
   ],
   declarations: [ 
     RootComponent,

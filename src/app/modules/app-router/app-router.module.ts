@@ -5,6 +5,7 @@ import { HomePageComponent } from '../app-root/components/basic-pages/home-page/
 import { AboutUsComponent } from '../app-root/components/basic-pages/about-us/about-us.component';
 import { ContactUsComponent } from '../app-root/components/basic-pages/contact-us/contact-us.component';
 import { ApplicationFormComponent } from '../app-root/components/application-form/application-form.component';
+import { LoginComponent } from '../clients/components/login/login.component';
 
 const ROUTES: Routes = [
   {
@@ -19,6 +20,10 @@ const ROUTES: Routes = [
   {
     path: '',
     component: HomePageComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'about-us',

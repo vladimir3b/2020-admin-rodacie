@@ -7,17 +7,16 @@
     <input matInput placeholder="Adresă de email">
   </mat-form-field>
   <mat-radio-group
-      [(ngModel)]="familyType"
+      [(ngModel)]="onlineForm.monoparentalFamily"
       aria-label="Select an option"  
       fxLayout="column"
       fxLayoutAlign="center stretch"
       [fxLayoutGap]="gapBetweenFormElements">
-    <mat-radio-button (click)="show()" value="1">
+    <mat-radio-button [value]="true">
       Familie monoparentală sau cu reprezentant legal
     </mat-radio-button>      
-    <mat-radio-button (click)="show()" value="2">
+    <mat-radio-button  [value]="false">
       Familie cu doi părinți
     </mat-radio-button>
   </mat-radio-group>
-  <button (click)="show()">Arată tipul de familie</button>
 </div>

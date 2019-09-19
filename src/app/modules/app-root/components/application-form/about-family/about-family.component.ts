@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { OnlineFormService } from 'src/app/services/online-form.service';
 
 @Component({
   selector: 'fg-about-family',
@@ -7,8 +8,7 @@ import { Component, Input } from "@angular/core";
 })
 export class AboutFamily {
   @Input() gapBetweenFormElements;
-  familyType: any;
-  show(): void {
-    console.log(this.familyType);
-  }
+
+  constructor(public onlineForm: OnlineFormService) {}
+
 }

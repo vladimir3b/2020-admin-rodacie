@@ -34,6 +34,7 @@
 
 h1 {
   margin: 0;
+  margin-bottom: $gap-between-page-elements;
   font-weight: 400;
   padding: 0 1.5rem;
   font-size: 2.5rem;
@@ -74,4 +75,8 @@ h2 {
 
 .mat-form-field-wrapper {
   padding: 0 !important;
+}
+
+footer {
+  margin-top: $gap-between-page-elements;
 }

@@ -1,0 +1,50 @@
+<h1>Autentificare client</h1>
+<div 
+    fxLayout="column"
+    fxLayoutAlign="center center">
+  <form 
+      class="container-ls"
+      ngClass.lt-lg="container-ss"    
+      fxLayout="column"
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      [fxLayoutGap]="gapBetweenFormElements"
+      fxLayoutAlign="space-between stretch">
+    
+      <mat-form-field appearance="outline">
+        <input matInput
+          type="text"
+          formControlName="username"
+          placeholder="Nume utilizator">
+        <mat-error>Trebuie introdus numele de utilizator.</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput
+            type="password"
+            appearance="outline"
+            formControlName="password"
+            placeholder="Parolă">
+        <mat-error>Trebuie introdusă parola.</mat-error>
+      </mat-form-field>
+
+    <div 
+        fxLayout="row"
+        fxLayout.lt-md="column"
+        [fxLayoutGap]="gapBetweenFormElements"
+        fxLayoutAlign="start stretch">
+      <button 
+          mat-raised-button
+          color="primary"
+          type="submit">
+        Autentificare
+      </button>
+  
+      <button 
+          mat-raised-button
+          color="accent">
+        Utilizator nou
+      </button>
+    </div>
+
+  </form>
+</div>

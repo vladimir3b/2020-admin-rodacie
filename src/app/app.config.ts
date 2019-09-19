@@ -4,6 +4,10 @@ export const MENU = [
     link: ''
   },
   {
+    title: 'Autentificare',
+    link: 'login'
+  },
+  {
     title: 'Formular on-line',
     link: 'application-form'
   },
@@ -16,3 +20,7 @@ export const MENU = [
     link: 'contact-us'
   }
 ];
+
+export const UI_VALUES = {
+  gapBetweenFormElements: "1.2rem"
+}
