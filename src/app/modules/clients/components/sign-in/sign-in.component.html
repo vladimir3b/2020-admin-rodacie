@@ -1,0 +1,62 @@
+<h1>Creare cont nou familie</h1>
+<div 
+    fxLayout="column"
+    fxLayoutAlign="center center">
+  <form 
+      class="container-ls"
+      ngClass.lt-lg="container-ss"    
+      fxLayout="column"
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      [fxLayoutGap]="gapBetweenFormElements"
+      fxLayoutAlign="space-between stretch">
+    
+      <mat-form-field appearance="outline">
+        <mat-label>Nume utilizator</mat-label>
+        <input matInput
+          type="text"
+          formControlName="username"
+          placeholder="nume utilizator...">
+        <mat-error>Trebuie introdus numele de utilizator.</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email utilizator</mat-label>
+        <input matInput          
+          type="text"
+          formControlName="email"
+          placeholder="email utilizator...">
+        <mat-error>Trebuie introdusă o adresă de email validă.</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Introduceți parola</mat-label>
+        <input matInput
+            type="password"
+            appearance="outline"
+            formControlName="password1"
+            placeholder="parola...">
+        <mat-error>Trebuie definită o parolă.</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Reintroduceți parola</mat-label>
+        <input matInput
+            type="password"
+            appearance="outline"
+            placeholder="repetați parola..."
+            formControlName="password2">
+        <mat-error>Trebuie introdusă aceeași parolă ca mai sus.</mat-error>
+      </mat-form-field>
+    <div 
+        fxLayout="row"
+        fxLayout.lt-md="column"
+        [fxLayoutGap]="gapBetweenFormElements"
+        fxLayoutAlign="start stretch">
+      <button 
+          mat-raised-button
+          color="primary"
+          type="submit">
+        Crează utilizator
+      </button>
+    </div>
+
+  </form>
+</div>

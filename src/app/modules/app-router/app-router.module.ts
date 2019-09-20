@@ -6,6 +6,7 @@ import { AboutUsComponent } from '../app-root/components/basic-pages/about-us/ab
 import { ContactUsComponent } from '../app-root/components/basic-pages/contact-us/contact-us.component';
 import { ApplicationFormComponent } from '../app-root/components/application-form/application-form.component';
 import { LoginComponent } from '../clients/components/login/login.component';
+import { SignInComponent } from '../clients/components/sign-in/sign-in.component';
 
 const ROUTES: Routes = [
   {
@@ -24,6 +25,10 @@ const ROUTES: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'sign-in',
+    component: SignInComponent
   },
   {
     path: 'about-us',
