@@ -11,6 +11,7 @@
       fxLayout.lt-md="column"
       [fxLayoutGap]="gapBetweenFormElements">
     <mat-form-field appearance="outline">
+      <mat-label>Alege opțiune creșă 1</mat-label>    
       <mat-select 
           formControlName="nurseryOption1"
           placeholder="Alege opțiune creșă 1">
@@ -23,6 +24,7 @@
       <mat-error>Trebuie aleasă o creșă.</mat-error>   
     </mat-form-field>
     <mat-form-field appearance="outline">
+      <mat-label>Alege opțiune creșă 2</mat-label>    
       <mat-select 
           formControlName="nurseryOption2"
           placeholder="Alege opțiune creșă 2">
@@ -41,6 +43,7 @@
       fxLayout.lt-md="column"
       [fxLayoutGap]="gapBetweenFormElements">
     <mat-form-field appearance="outline">
+      <mat-label>Nume copil</mat-label>    
       <input 
           formControlName="lastName" 
           matInput 
@@ -48,6 +51,7 @@
       <mat-error>Numele copilului este obligatoriu.</mat-error>      
     </mat-form-field>
     <mat-form-field appearance="outline">
+      <mat-label>Prenume copil</mat-label>  
       <input 
           formControlName="firstName" 
           matInput 
@@ -61,6 +65,7 @@
       fxLayout.lt-md="column"
       [fxLayoutGap]="gapBetweenFormElements">
     <mat-form-field appearance="outline">
+      <mat-label>CNP</mat-label>  
       <input matInput placeholder="CNP">
     </mat-form-field>
     <div 
@@ -68,9 +73,11 @@
         fxLayout.lt-sm="column"
         [fxLayoutGap]="gapBetweenFormElements">
       <mat-form-field appearance="outline">
+        <mat-label>Vârstă (ani)</mat-label>  
         <input matInput placeholder="Vârstă (ani)">
       </mat-form-field>
       <mat-form-field appearance="outline">
+        <mat-label>Vârstă (luni)</mat-label>
         <input matInput placeholder="Vârstă (luni)">
       </mat-form-field>
     </div>      
@@ -90,9 +97,10 @@
             fxLayoutAlign="start center"
             fxLayoutAlign.lt-sm="start start"
             [fxLayoutGap.gt-xs]="gapBetweenFormElements"
-            fxLayout.lt-sm="column">
+            fxLayout.lt-sm="column">          
           <span>De la o data ulterioară:</span>
           <mat-form-field appearance="outline">
+            <mat-label>alegeți o dată</mat-label>
             <input matInput [matDatepicker]="picker" placeholder="alegeți o dată">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>

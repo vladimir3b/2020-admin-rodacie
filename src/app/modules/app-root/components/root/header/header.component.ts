@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'fg-header',
@@ -7,6 +8,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent {
   @Output() toggleSidebar = new EventEmitter<void>();
+
+  constructor(private _authentication: AuthenticationService) { }
 
   onToggle(): void {
     this.toggleSidebar.emit();

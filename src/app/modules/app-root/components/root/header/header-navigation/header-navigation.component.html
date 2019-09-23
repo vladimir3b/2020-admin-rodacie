@@ -3,11 +3,13 @@
     fxLayoutAlign="start center"
     fxLayoutGap="1rem">
 
-  <button 
-      mat-button 
-      *ngFor="let element of menu"
-      [routerLink]="element.link">
-    {{element.title}}
-  </button>
+  <ng-container *ngFor="let element of menu">
+    <button 
+        mat-button 
+        *ngIf="element.show$ | async"
+        [routerLink]="element.link">
+      {{element.title}}
+    </button>
+  </ng-container>
  
 </div>
