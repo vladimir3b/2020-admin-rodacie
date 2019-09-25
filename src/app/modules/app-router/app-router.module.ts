@@ -7,6 +7,7 @@ import { ContactUsComponent } from '../app-root/components/basic-pages/contact-u
 import { ApplicationFormComponent } from '../app-root/components/application-form/application-form.component';
 import { LoginComponent } from '../clients/components/login/login.component';
 import { SignInComponent } from '../clients/components/sign-in/sign-in.component';
+import { RouteGuardsService } from 'src/app/services/route-guards.service';
 
 const ROUTES: Routes = [
   {
@@ -40,7 +41,8 @@ const ROUTES: Routes = [
   },
   {
     path: 'application-form',
-    component: ApplicationFormComponent
+    component: ApplicationFormComponent,
+    canActivate: [ RouteGuardsService ]
   },
   {
     path: '**',

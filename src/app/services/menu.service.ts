@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AuthenticationService } from './authentication.service';
 import { Observable, of } from 'rxjs';
-import { map, shareReplay, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 export interface IMenuElement {
   title: string;
@@ -18,20 +18,13 @@ export class MenuService {
       title: 'Acasă',
       link: '',
       show$: of(true)
-    },
-    {
-      title: 'Autentificare',
-      link: 'login',
-      show$: this._authentication.authenticatedUser$.pipe(
-        tap(user => console.log('ubub', user)),
-        map(user => user ? false :  true),
-        shareReplay(1)
-      )
-    },
+    }, 
     {
       title: 'Formular on-line',
       link: 'application-form',
-      show$: of(true)
+      show$: this._authentication.authenticatedUser$.pipe(
+        map(user => user ? true :  false),
+      )
     },
     {
       title: 'Despre noi',
@@ -42,6 +35,20 @@ export class MenuService {
       title: 'Contactați-ne',
       link: 'contact-us',
       show$: of(true)
+    },
+    {
+      title: 'Autentificare',
+      link: 'login',
+      show$: this._authentication.authenticatedUser$.pipe(
+        map(user => user ? false :  true),
+      )
+    },
+    {
+      title: 'Ieșire',
+      link: 'logout',
+      show$: this._authentication.authenticatedUser$.pipe(
+        map(user => user ? true :  false),
+      )
     }
   ];
 

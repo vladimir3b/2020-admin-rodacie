@@ -63,6 +63,9 @@ h2 {
   width: 100%;
 }
 
+footer {
+  margin-top: $gap-between-page-elements;
+}
 .container-ls {
   background-color: inherit !important;
   width: $flex-width-md - 20px;
@@ -73,6 +76,6 @@ h2 {
   width: 92%;
 }
 
-footer {
-  margin-top: $gap-between-page-elements;
+.error {
+  color: $error-color;
 }

@@ -10,7 +10,11 @@
       (ngSubmit)="onSubmit()"
       [fxLayoutGap]="gapBetweenFormElements"
       fxLayoutAlign="space-between stretch">
-    
+
+      <h3 class="error" *ngIf="loginError$ | async">
+        Datele de autentificare au fost eronate!
+      </h3>
+      
       <mat-form-field appearance="outline">
         <mat-label>Nume utilizator</mat-label>        
         <input matInput
@@ -35,6 +39,7 @@
         [fxLayoutGap]="gapBetweenFormElements"
         fxLayoutAlign="start stretch">
       <button 
+          [disabled]="loginForm.invalid"
           mat-raised-button
           color="primary"
           type="submit">

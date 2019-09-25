@@ -8,4 +8,8 @@
   </button>  
   <fg-logo></fg-logo>
   <fg-header-navigation fxHide.lt-md></fg-header-navigation>
+  <button *ngIf="authenticatedUser$ | async" mat-icon-button>
+    <mat-icon>person</mat-icon> 
+    {{ authenticatedUser$ | async }}
+  </button>
 </mat-toolbar>

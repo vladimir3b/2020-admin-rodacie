@@ -2,6 +2,11 @@ import { IUserModel } from '../models/user.model';
 
 export const USERS: Array<IUserModel> = [
   {
+    username: 'vladimir',
+    email: 'vladimir@yahoo.com',
+    password: 'vladimir',
+  },
+  {
     username: 'gay.noel1999',
     email: 'gay.noel1999@yahoo.com',
     password: '5d6b6b957ec5220e67e4d329',
